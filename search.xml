@@ -357,6 +357,7 @@
 ]]></content>
       <categories>
         <category>后端</category>
+        <category>database</category>
       </categories>
       <tags>
         <tag>liquibase</tag>
