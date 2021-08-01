@@ -311,6 +311,10 @@
     <title>Liquibase</title>
     <url>/2021/08/01/Liquibase/</url>
     <content><![CDATA[<h4 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h4><p>​        Liquibase 是一个用于跟踪，管理和应用数据库变化的开源的数据库重构工具。它将所有数据库的变化(包括结构和数据) 都保存在XML文件中，便于版本控制。</p>
+<a id="more"></a>
+
+
+
 <h4 id="2-特性"><a href="#2-特性" class="headerlink" title="2.特性"></a>2.特性</h4><ul>
 <li>不依赖于特定的数据库，目前支持包括Oracle/Sql Server/DB2/MySql/Sybase/PostgreSQL/Caché等12种数据库，这样在数据库的部署和升级环节可帮助应用系统支持多数据库；</li>
 <li>提供数据库比较功能，比较结果保存在XML中，基于该XML你可用Liquibase轻松部署或升级数据库；</li>
