@@ -138,7 +138,7 @@
 <meta property="og:description" content="Java 中的 HashMap 是编程中较为常用的数据结构之一，与其对比的还有 HashTable、ConcurrentHashMap，万变不离其宗，只有掌握了其设计思想，才能从本质上理解它们的用法。">
 <meta property="og:image" content="https://luwy5180.github.io/2020/09/05/HashMap%E8%A7%A3%E6%9E%90/image-20200905105525253.png">
 <meta property="article:published_time" content="2020-09-05T02:35:10.000Z">
-<meta property="article:modified_time" content="2020-09-05T03:23:36.874Z">
+<meta property="article:modified_time" content="2021-08-01T02:44:13.012Z">
 <meta property="article:author" content="Mr.Lu">
 <meta property="article:tag" content="Map">
 <meta name="twitter:card" content="summary">
@@ -448,7 +448,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  632
+                  639
                 </span>
               
 
@@ -491,8 +491,8 @@
 <h4 id="1-数组的优势"><a href="#1-数组的优势" class="headerlink" title="1.数组的优势"></a>1.数组的优势</h4><img src="/2020/09/05/HashMap%E8%A7%A3%E6%9E%90/image-20200905105525253.png" alt="image-20200905105525253" style="zoom:67%;">
 
 <center><b>图1.1 整型数组</b></center>
+上图是一个含有 8 个元素多的整型数组，数组下标从 0 到 7，基于数组下标的随机访问和赋值数组元素的时间复杂度都是 $O(1)$，无论数组有多大（在内存充足的情况下），这是数组的优势之一。
 
-<p>上图是一个含有 8 个元素多的整型数组，数组下标从 0 到 7，基于数组下标的随机访问和赋值数组元素的时间复杂度都是 $O(1)$，无论数组有多大（在内存充足的情况下），这是数组的优势之一。</p>
 <p>数组可以通过下标来获取数组中指的元素，但是这个下标只能试正整数，并且从 0 开始。如果想通过一个浮点数、字符串、对象作为 <em>key</em> 呢？即 <code>key - value</code>，这个时候就难以满足这个需求了。</p>
 <p>数组也可以看作是一种特殊的键值对，<em>key</em> 是数组的下标，<em>value</em> 是数组的下标对应的元素值，因此要求 <em>KV</em> 数据结构里的 <em>key</em> 是一个对象，而不仅仅只能是数组中的一个下标。<em>KV</em>  数据结构需要满足一下特性：</p>
 <ul>
@@ -512,7 +512,7 @@
 <li><strong>链地址法</strong>：将所有关键字为同义词的记录存储在同一线性链表中；</li>
 <li>建立一个公共溢出区</li>
 </ul>
-
+<h4 id="4-多线程下闭环"><a href="#4-多线程下闭环" class="headerlink" title="4.多线程下闭环"></a>4.多线程下闭环</h4>
       
     </div>
     
@@ -588,6 +588,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/08/01/%E6%B5%8B%E8%AF%95/" rel="prev" title="测试">
+                测试 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -698,7 +702,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -799,7 +803,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-数组的优势"><span class="nav-text">1.数组的优势</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Hash函数"><span class="nav-text">2.Hash函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Hash冲突"><span class="nav-text">3.Hash冲突</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-数组的优势"><span class="nav-text">1.数组的优势</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Hash函数"><span class="nav-text">2.Hash函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Hash冲突"><span class="nav-text">3.Hash冲突</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-多线程下闭环"><span class="nav-text">4.多线程下闭环</span></a></li></ol></div>
             
 
           </div>
