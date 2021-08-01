@@ -30,7 +30,8 @@
 <li><strong>链地址法</strong>：将所有关键字为同义词的记录存储在同一线性链表中；</li>
 <li>建立一个公共溢出区</li>
 </ul>
-<h4 id="4-多线程下闭环"><a href="#4-多线程下闭环" class="headerlink" title="4.多线程下闭环"></a>4.多线程下闭环</h4>]]></content>
+<h4 id="4-多线程下闭环"><a href="#4-多线程下闭环" class="headerlink" title="4.多线程下闭环"></a>4.多线程下闭环</h4><p>HashMap在<code>JDK1.7</code>版本下，多线程下扩容容器发生闭环，造成这种现象的原因是头插法。</p>
+]]></content>
       <categories>
         <category>数据结构</category>
       </categories>
