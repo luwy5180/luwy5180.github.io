@@ -40,6 +40,76 @@
       </tags>
   </entry>
   <entry>
+    <title>记录第一篇博客搭建的全过程</title>
+    <url>/2022/03/15/hello-world/</url>
+    <content><![CDATA[<p>欢迎来到 Hexo! Hexo是一款快速、简洁且高效的博客框架。<strong>超快速度</strong>：Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染；<strong>支持 Markdown</strong>：Hexo 支持 GitHub Flavored Markdown 的所有功能，甚至可以整合 Octopress 的大多数插件；<strong>一键部署</strong>：只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站。<strong>丰富的插件</strong>：Hexo 拥有强大的插件系统，安装插件可以让 Hexo 支持 Jade, CoffeeScript。</p>
+<a id="more"></a>
+
+<h4 id="1-安装环境"><a href="#1-安装环境" class="headerlink" title="1.安装环境"></a>1.安装环境</h4><p>在安装 hexo 前需要准备 node.js 环境，在<code>CMD</code>下使用 node -v 可以查看 node 的版本信息，在node.js官网 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a> 中选择 LTS 下载安装即可。之后需要安装 cnpm 环境，安装命令为 npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org，使用" target="_blank" rel="noopener">https://registry.npm.taobao.org，使用</a> cnpm -v 命令查看版本，环境搭建完成后就可以开始 hexo 博客的搭建步骤了，如下所示：</p>
+<ul>
+<li><p>安装 hexo：<code>cnpm install -g hexo-cli</code></p>
+</li>
+<li><p>创建博客文件夹：如 <code>E:/codecat/blog</code></p>
+</li>
+<li><p>切换路径：<code>cd E:/codecat/blog</code></p>
+</li>
+<li><p>初始化 hexo：<code>hexo init</code></p>
+</li>
+<li><p>启动 hexo 服务：<code>hexo s</code></p>
+<ul>
+<li>启动后可以在本地的 <code>4000</code> 端口访问查看</li>
+</ul>
+</li>
+<li><p><strong>部署到远端(Github)</strong></p>
+<ul>
+<li><p>安装插件：<code>cnpm install --save hexo-deployer-git</code></p>
+</li>
+<li><p>配置 _config.yml 文件，其中 <strong>IAmLuwenyang.github.io.git</strong> 为 Github 创建的 repository 名称</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">'git'</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/IAmLuwenyang/IAmLuwenyang.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>部署到 Github 中，输入命令：<code>hexo d</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-更换hexo主题"><a href="#2-更换hexo主题" class="headerlink" title="2.更换hexo主题"></a>2.更换hexo主题</h4><p>推荐几款主题，喜欢的朋友们可以去对应的Github网址上访问下载。</p>
+<ul>
+<li><p>butterfly主题，风格如下所示：</p>
+<p><img src="/.io//image-20200718212926602.png" alt="image-20200718212926602"></p>
+<center>图2-1 基于hexo的butterfly风格的博客首页</center>
+</li>
+<li><p>matery主题，一个基于材料设计和响应式设计而成的全面、美观的Hexo主题，<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="noopener">https://github.com/blinkfox/hexo-theme-matery</a> ；</p>
+<p><img src="/.io//image-20200718213026206.png" alt="image-20200718213026206"></p>
+<center>图2-2 基于hexo的matery风格的博客首页</center>
+</li>
+<li><p>yilia主题，一个简洁优雅的hexo主题，<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia</a> ;</p>
+<p><img src="/.io//2020-07-19_025004.png" alt="2020-07-19_025004"></p>
+<center>图2-3 基于hexo的yilia风格的博客首页</center>
+</li>
+<li><p>next主题，<a href="https://github.com/iissnan/hexo-theme-next，个人比较喜欢" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next，个人比较喜欢</a> next 的风格，图2-4是 next 主题的博客首页效果图，下一篇会为大家带来详细的 next 主题样式改造文章！</p>
+<p><img src="/.io//iamge-20200719015814.png" alt="iamge-20200719015814"></p>
+</li>
+</ul>
+<center>图2-4 基于hexo的next风格的博客首页</center>
+
+<p>下载主题，以matery为例，在命令行输入 <code>git clone https://github.com/blinkfox/hexo-theme-matery.git themes/matery</code> 需要修改  _config.yml 中的配置 <code>theme: matery</code>，完成后执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean <span class="comment"># 清除本地静态资源</span></span><br><span class="line">hexo g     <span class="comment"># 重新生成</span></span><br><span class="line">hexo s     <span class="comment"># 启动服务</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 推送到Github</span></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>本地访问路径：<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
+<h4 id="3-快速开始"><a href="#3-快速开始" class="headerlink" title="3.快速开始"></a>3.快速开始</h4><p>如何写另一篇博客，需要在命令行输入：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;next主题的优化配置&quot;</span><br></pre></td></tr></table></figure>
+
+<p>更多详细信息访问：<a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">https://hexo.io/docs/writing.html</a> 。</p>
+<h4 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4.注意事项"></a>4.注意事项</h4><p>​        搭建过程中所有的命令行操作都在 Git Bash 中完成，因此需要提前下载安装 Git 环境。</p>
+]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo主题next的美化配置</title>
     <url>/2020/07/19/Hexo%E4%B8%BB%E9%A2%98next%E7%9A%84%E7%BE%8E%E5%8C%96%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<p>Hexo的Next主题拥有丰富而简单的配置，结合第三方服务，打造属于您自己的博客。<a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">主题配置</a>：NexT 坚持将复杂的细节隐藏，提供尽量少并且简便的设置，保持最大限度的易用性；<a href="http://theme-next.iissnan.com/third-party-services.html" target="_blank" rel="noopener">第三方服务集成</a>：使用 第三方服务 来扩展站点的功能， NexT 支持多种常见第三方服务；<a href="http://theme-next.iissnan.com/tag-plugins.html" target="_blank" rel="noopener">内置标签</a>：除了 Markdown 支持的语法之外，NexT 借助 Hexo 提供的标签特性， 为您提供在书写文档时快速插入带特殊样式的内容；<a href="http://theme-next.iissnan.com/faqs.html" target="_blank" rel="noopener">常见问题</a>：NexT 使用中常见的问题。当您在使用中有疑问的时候，不妨先来这里看看。 或者在这里分享您在使用过程中碰到的问题。</p>
@@ -235,76 +305,6 @@
       <tags>
         <tag>hexo</tag>
         <tag>next主题</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>记录第一篇博客搭建的全过程</title>
-    <url>/2022/03/15/hello-world/</url>
-    <content><![CDATA[<p>欢迎来到 Hexo! Hexo是一款快速、简洁且高效的博客框架。<strong>超快速度</strong>：Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染；<strong>支持 Markdown</strong>：Hexo 支持 GitHub Flavored Markdown 的所有功能，甚至可以整合 Octopress 的大多数插件；<strong>一键部署</strong>：只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站。<strong>丰富的插件</strong>：Hexo 拥有强大的插件系统，安装插件可以让 Hexo 支持 Jade, CoffeeScript。</p>
-<a id="more"></a>
-
-<h4 id="1-安装环境"><a href="#1-安装环境" class="headerlink" title="1.安装环境"></a>1.安装环境</h4><p>在安装 hexo 前需要准备 node.js 环境，在<code>CMD</code>下使用 node -v 可以查看 node 的版本信息，在node.js官网 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a> 中选择 LTS 下载安装即可。之后需要安装 cnpm 环境，安装命令为 npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org，使用" target="_blank" rel="noopener">https://registry.npm.taobao.org，使用</a> cnpm -v 命令查看版本，环境搭建完成后就可以开始 hexo 博客的搭建步骤了，如下所示：</p>
-<ul>
-<li><p>安装 hexo：<code>cnpm install -g hexo-cli</code></p>
-</li>
-<li><p>创建博客文件夹：如 <code>E:/codecat/blog</code></p>
-</li>
-<li><p>切换路径：<code>cd E:/codecat/blog</code></p>
-</li>
-<li><p>初始化 hexo：<code>hexo init</code></p>
-</li>
-<li><p>启动 hexo 服务：<code>hexo s</code></p>
-<ul>
-<li>启动后可以在本地的 <code>4000</code> 端口访问查看</li>
-</ul>
-</li>
-<li><p><strong>部署到远端(Github)</strong></p>
-<ul>
-<li><p>安装插件：<code>cnpm install --save hexo-deployer-git</code></p>
-</li>
-<li><p>配置 _config.yml 文件，其中 <strong>IAmLuwenyang.github.io.git</strong> 为 Github 创建的 repository 名称</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">'git'</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/IAmLuwenyang/IAmLuwenyang.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>部署到 Github 中，输入命令：<code>hexo d</code></p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="2-更换hexo主题"><a href="#2-更换hexo主题" class="headerlink" title="2.更换hexo主题"></a>2.更换hexo主题</h4><p>推荐几款主题，喜欢的朋友们可以去对应的Github网址上访问下载。</p>
-<ul>
-<li><p>butterfly主题，风格如下所示：</p>
-<p><img src="/.io//image-20200718212926602.png" alt="image-20200718212926602"></p>
-<center>图2-1 基于hexo的butterfly风格的博客首页</center>
-</li>
-<li><p>matery主题，一个基于材料设计和响应式设计而成的全面、美观的Hexo主题，<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="noopener">https://github.com/blinkfox/hexo-theme-matery</a> ；</p>
-<p><img src="/.io//image-20200718213026206.png" alt="image-20200718213026206"></p>
-<center>图2-2 基于hexo的matery风格的博客首页</center>
-</li>
-<li><p>yilia主题，一个简洁优雅的hexo主题，<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia</a> ;</p>
-<p><img src="/.io//2020-07-19_025004.png" alt="2020-07-19_025004"></p>
-<center>图2-3 基于hexo的yilia风格的博客首页</center>
-</li>
-<li><p>next主题，<a href="https://github.com/iissnan/hexo-theme-next，个人比较喜欢" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next，个人比较喜欢</a> next 的风格，图2-4是 next 主题的博客首页效果图，下一篇会为大家带来详细的 next 主题样式改造文章！</p>
-<p><img src="/.io//iamge-20200719015814.png" alt="iamge-20200719015814"></p>
-</li>
-</ul>
-<center>图2-4 基于hexo的next风格的博客首页</center>
-
-<p>下载主题，以matery为例，在命令行输入 <code>git clone https://github.com/blinkfox/hexo-theme-matery.git themes/matery</code> 需要修改  _config.yml 中的配置 <code>theme: matery</code>，完成后执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean <span class="comment"># 清除本地静态资源</span></span><br><span class="line">hexo g     <span class="comment"># 重新生成</span></span><br><span class="line">hexo s     <span class="comment"># 启动服务</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 推送到Github</span></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>本地访问路径：<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
-<h4 id="3-快速开始"><a href="#3-快速开始" class="headerlink" title="3.快速开始"></a>3.快速开始</h4><p>如何写另一篇博客，需要在命令行输入：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;next主题的优化配置&quot;</span><br></pre></td></tr></table></figure>
-
-<p>更多详细信息访问：<a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">https://hexo.io/docs/writing.html</a> 。</p>
-<h4 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4.注意事项"></a>4.注意事项</h4><p>​        搭建过程中所有的命令行操作都在 Git Bash 中完成，因此需要提前下载安装 Git 环境。</p>
-]]></content>
-      <categories>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
