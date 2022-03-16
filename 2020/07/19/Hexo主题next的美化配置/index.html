@@ -63,8 +63,6 @@
   
 
   
-
-  
     
       
     
@@ -90,8 +88,16 @@
 
   
     
+      
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|宋体,Times:300,300italic,400,400italic,700,700italic|Times:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=宋体, Times New Roman:300,300italic,400,400italic,700,700italic|华文中宋:300,300italic,400,400italic,700,700italic|宋体, Times New Roman:300,300italic,400,400italic,700,700italic|Times:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -137,7 +143,7 @@
 <meta property="og:site_name" content="CodeCat">
 <meta property="og:description" content="Hexo的Next主题拥有丰富而简单的配置，结合第三方服务，打造属于您自己的博客。主题配置：NexT 坚持将复杂的细节隐藏，提供尽量少并且简便的设置，保持最大限度的易用性；第三方服务集成：使用 第三方服务 来扩展站点的功能， NexT 支持多种常见第三方服务；内置标签：除了 Markdown 支持的语法之外，NexT 借助 Hexo 提供的标签特性， 为您提供在书写文档时快速插入带特殊样式的内容；">
 <meta property="article:published_time" content="2020-07-19T02:49:28.000Z">
-<meta property="article:modified_time" content="2021-08-01T02:45:17.100Z">
+<meta property="article:modified_time" content="2022-03-16T16:25:10.450Z">
 <meta property="article:author" content="Mr.Lu">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="next主题">
@@ -447,7 +453,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3.9k
+                  5.8k
                 </span>
               
 
@@ -463,7 +469,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  20
+                  30
                 </span>
               
             </div>
@@ -670,6 +676,70 @@
 <li><p>现在就可以插入图片了。</p>
 </li>
 </ul>
+<h4 id="4-高级美化"><a href="#4-高级美化" class="headerlink" title="4.高级美化"></a>4.高级美化</h4><h5 id="4-1-彩色标签页"><a href="#4-1-彩色标签页" class="headerlink" title="4.1 彩色标签页"></a>4.1 彩色标签页</h5><p>在 <code>/themes/next/layout/</code> 目录下，新增 `` 文件，填入如下内容：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">     <span class="keyword">var</span> alltags = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'tag-cloud-tags'</span>);</span><br><span class="line">     <span class="keyword">var</span> tags = alltags[<span class="number">0</span>].getElementsByTagName(<span class="string">'a'</span>);</span><br><span class="line">     <span class="keyword">for</span> (<span class="keyword">var</span> i = tags.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">       <span class="keyword">var</span> r=<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*<span class="number">75</span>+<span class="number">130</span>);</span><br><span class="line">       <span class="keyword">var</span> g=<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*<span class="number">75</span>+<span class="number">100</span>);</span><br><span class="line">       <span class="keyword">var</span> b=<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*<span class="number">75</span>+<span class="number">80</span>);</span><br><span class="line">       tags[i].style.background = <span class="string">"rgb("</span>+r+<span class="string">","</span>+g+<span class="string">","</span>+b+<span class="string">")"</span>;</span><br><span class="line">     &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;style&gt;</span></span><br><span class="line"><span class="regexp">  .tag-cloud-tags&#123;</span></span><br><span class="line"><span class="regexp">    /</span>*font-family: Helvetica, Tahoma, Arial;*<span class="regexp">/</span></span><br><span class="line"><span class="regexp">    /</span>*font-weight: <span class="number">100</span>;*<span class="regexp">/</span></span><br><span class="line"><span class="regexp">    text-align: center;</span></span><br><span class="line"><span class="regexp">    counter-reset: tags;</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">  .tag-cloud-tags a&#123;</span></span><br><span class="line"><span class="regexp">    border-radius: 6px;</span></span><br><span class="line"><span class="regexp">    padding-right: 5px;</span></span><br><span class="line"><span class="regexp">    padding-left: 5px;</span></span><br><span class="line"><span class="regexp">    margin: 8px 5px 0px 0px;</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">  .tag-cloud-tags a:before&#123;</span></span><br><span class="line"><span class="regexp">    content: "🔖";</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">  .tag-cloud-tags a:hover&#123;</span></span><br><span class="line"><span class="regexp">     box-shadow: 0px 5px 15px 0px rgba(0,0,0,.4);</span></span><br><span class="line"><span class="regexp">     transform: scale(1.1);</span></span><br><span class="line"><span class="regexp">     /</span>*box-shadow: <span class="number">10</span>px <span class="number">10</span>px <span class="number">15</span>px <span class="number">2</span>px rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">.12</span>), <span class="number">0</span> <span class="number">0</span> <span class="number">6</span>px <span class="number">0</span> rgba(<span class="number">104</span>, <span class="number">104</span>, <span class="number">105</span>, <span class="number">0.1</span>);*<span class="regexp">/</span></span><br><span class="line"><span class="regexp">     transition-duration: 0.15s;</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在同级目录的 <code>page.swig</code> 中引入 <code>tag-color.swig</code></p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% include 'tag-color.swig' %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="4-2-归档页美化"><a href="#4-2-归档页美化" class="headerlink" title="4.2 归档页美化"></a>4.2 归档页美化</h5><p>​        修改 <code>themes/next/layout/_macro/post-collapse.swig</code> 后代码如下：</p>
+<p>​        修改前：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&#123;% macro render(post) %&#125;</span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">article</span> <span class="attr">class</span>=<span class="string">"post post-type-&#123;&#123; post.type | default('normal') &#125;&#125;"</span> <span class="attr">itemscope</span> <span class="attr">itemtype</span>=<span class="string">"http://schema.org/Article"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">header</span> <span class="attr">class</span>=<span class="string">"post-header"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">&#123;%</span> <span class="attr">if</span> <span class="attr">theme.seo</span> %&#125;<span class="attr">h3</span>&#123;% <span class="attr">else</span> %&#125;<span class="attr">h2</span>&#123;% <span class="attr">endif</span> %&#125; <span class="attr">class</span>=<span class="string">"post-title"</span>&gt;</span></span><br><span class="line">        &#123;% if post.link %&#125;&#123;# Link posts #&#125;</span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"post-title-link post-title-link-external"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">href</span>=<span class="string">"&#123;&#123; url_for(post.link) &#125;&#125;"</span> <span class="attr">itemprop</span>=<span class="string">"url"</span>&gt;</span></span><br><span class="line">            &#123;&#123; post.title or post.link &#125;&#125;</span><br><span class="line">            <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-external-link"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        &#123;% else %&#125;</span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"post-title-link"</span> <span class="attr">href</span>=<span class="string">"&#123;&#123; url_for(post.path) &#125;&#125;"</span> <span class="attr">itemprop</span>=<span class="string">"url"</span>&gt;</span></span><br><span class="line">              &#123;% if post.type === 'picture' %&#125;</span><br><span class="line">                &#123;&#123; post.content &#125;&#125;</span><br><span class="line">              &#123;% else %&#125;</span><br><span class="line">                <span class="tag">&lt;<span class="name">span</span> <span class="attr">itemprop</span>=<span class="string">"name"</span>&gt;</span>&#123;&#123; post.title | default(__('post.untitled')) &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">              &#123;% endif %&#125;</span><br><span class="line">            <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        &#123;% endif %&#125;</span><br><span class="line">      <span class="tag">&lt;/<span class="name">&#123;%</span> <span class="attr">if</span> <span class="attr">theme.seo</span> %&#125;<span class="attr">h3</span>&#123;% <span class="attr">else</span> %&#125;<span class="attr">h2</span>&#123;% <span class="attr">endif</span> %&#125;&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-meta"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">time</span> <span class="attr">class</span>=<span class="string">"post-time"</span> <span class="attr">itemprop</span>=<span class="string">"dateCreated"</span></span></span><br><span class="line"><span class="tag">              <span class="attr">datetime</span>=<span class="string">"&#123;&#123; moment(post.date).format() &#125;&#125;"</span></span></span><br><span class="line"><span class="tag">              <span class="attr">content</span>=<span class="string">"&#123;&#123; date(post.date, config.date_format) &#125;&#125;"</span> &gt;</span></span><br><span class="line">          &#123;&#123; date(post.date, 'MM-DD') &#125;&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">time</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line"></span><br><span class="line">&#123;% endmacro %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​        修改后：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&#123;% macro render(post) %&#125;</span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">article</span> <span class="attr">class</span>=<span class="string">"my-post post-type-&#123;&#123; post.type | default('normal') &#125;&#125;"</span> <span class="attr">itemscope</span> <span class="attr">itemtype</span>=<span class="string">"http://schema.org/Article"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">header</span> <span class="attr">class</span>=<span class="string">"my-post-header"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"my-post-meta"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">time</span> <span class="attr">class</span>=<span class="string">"my-post-time"</span> <span class="attr">itemprop</span>=<span class="string">"dateCreated"</span></span></span><br><span class="line"><span class="tag">              <span class="attr">datetime</span>=<span class="string">"&#123;&#123; moment(post.date).format() &#125;&#125;"</span></span></span><br><span class="line"><span class="tag">              <span class="attr">content</span>=<span class="string">"&#123;&#123; date(post.date, config.date_format) &#125;&#125;"</span> &gt;</span></span><br><span class="line">          &#123;&#123; date(post.date, 'MM-DD') &#125;&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">time</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">&#123;%</span> <span class="attr">if</span> <span class="attr">theme.seo</span> %&#125;<span class="attr">h3</span>&#123;% <span class="attr">else</span> %&#125;<span class="attr">h2</span>&#123;% <span class="attr">endif</span> %&#125; <span class="attr">class</span>=<span class="string">"my-post-title"</span>&gt;</span></span><br><span class="line">        &#123;% if post.link %&#125;&#123;# Link posts #&#125;</span><br><span class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"my-post-title-link post-title-link-external"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">href</span>=<span class="string">"&#123;&#123; url_for(post.link) &#125;&#125;"</span> <span class="attr">itemprop</span>=<span class="string">"url"</span>&gt;</span></span><br><span class="line">            &#123;&#123; post.title or post.link &#125;&#125;</span><br><span class="line">            <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-external-link"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        &#123;% else %&#125;</span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"my-post-title-link"</span> <span class="attr">href</span>=<span class="string">"&#123;&#123; url_for(post.path) &#125;&#125;"</span> <span class="attr">itemprop</span>=<span class="string">"url"</span>&gt;</span></span><br><span class="line">              &#123;% if post.type === 'picture' %&#125;</span><br><span class="line">                &#123;&#123; post.content &#125;&#125;</span><br><span class="line">              &#123;% else %&#125;</span><br><span class="line">                <span class="tag">&lt;<span class="name">span</span> <span class="attr">itemprop</span>=<span class="string">"name"</span>&gt;</span>&#123;&#123; post.title | default(__('post.untitled')) &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">              &#123;% endif %&#125;</span><br><span class="line">            <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        &#123;% endif %&#125;</span><br><span class="line">      <span class="tag">&lt;/<span class="name">&#123;%</span> <span class="attr">if</span> <span class="attr">theme.seo</span> %&#125;<span class="attr">h3</span>&#123;% <span class="attr">else</span> %&#125;<span class="attr">h2</span>&#123;% <span class="attr">endif</span> %&#125;&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line"></span><br><span class="line">&#123;% endmacro %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​        主要修改：</p>
+<ul>
+<li>将 <code>post-meta</code> 这个 <code>div</code> 移到前面 <code>header</code> 标签下；</li>
+<li>将所有 <code>class</code> 属性加上 <code>my-</code>，如 <code>my-post-meta</code>，这样改动不影响其它页面引用的样式；</li>
+</ul>
+<p>​        在 <code>/themes/next/source/css/_custom/custom.styl</code> 新增如下样式：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 归档页样式 began */</span></span><br><span class="line"><span class="selector-class">.page-archive</span> <span class="selector-class">.archive-page-counter</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#49b1f5</span>;</span><br><span class="line">  <span class="attribute">padding-left</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">padding-right</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">  +mobile() &#123;</span><br><span class="line">    <span class="selector-tag">font-size</span>: 16<span class="selector-tag">px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.my-post-time</span>&#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">11px</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#49b1f5</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">padding-left</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">padding-right</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mypost</span>&#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: <span class="number">1rem</span>;</span><br><span class="line">  <span class="attribute">-webkit-transition</span>: all .<span class="number">2s</span> ease-in-out;</span><br><span class="line">  <span class="attribute">-moz-transition</span>: all .<span class="number">2s</span> ease-in-out;</span><br><span class="line">  <span class="attribute">-o-transition</span>: all .<span class="number">2s</span> ease-in-out;</span><br><span class="line">  <span class="attribute">-ms-transition</span>: all .<span class="number">2s</span> ease-in-out;</span><br><span class="line">  <span class="attribute">transition</span>: all .<span class="number">2s</span> ease-in-out;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-class">.my-post-title-link</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">18px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">18px</span>;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">"📚"</span>;</span><br><span class="line">  <span class="attribute">margin-right</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">font</span>: normal normal normal <span class="number">14px</span>/<span class="number">1</span> FontAwesome;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">15px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">18px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.my-post</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">1.1</span>);</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">10px</span> <span class="number">10px</span> <span class="number">15px</span> <span class="number">2px</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,.<span class="number">12</span>), <span class="number">0</span> <span class="number">0</span> <span class="number">6px</span> <span class="number">0</span> <span class="built_in">rgba</span>(<span class="number">104</span>, <span class="number">104</span>, <span class="number">105</span>, <span class="number">0.1</span>);</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">1px</span> <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">25px</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">  <span class="attribute">transition-duration</span>: <span class="number">0.15s</span>;</span><br><span class="line">  +mobile()&#123;</span><br><span class="line">    <span class="selector-tag">width</span>: 260<span class="selector-tag">px</span>;</span><br><span class="line">    <span class="selector-tag">margin-left</span>: 18<span class="selector-tag">px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  //display:flex;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-class">.my-post-title-link</span>&#123;</span><br><span class="line">  <span class="attribute">text-decoration</span>: none;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">15px</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">400</span>;</span><br><span class="line">  +mobile() &#123;</span><br><span class="line">    <span class="selector-tag">font-size</span>: 14<span class="selector-tag">px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.my-post-title</span>&#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">4.5rem</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#4c4948</span>;</span><br><span class="line">  <span class="attribute">text-decoration</span>: none;</span><br><span class="line">  <span class="attribute">font-size</span>: .<span class="number">8rem</span>;</span><br><span class="line">  <span class="attribute">cursor</span>: pointer;</span><br><span class="line">  +mobile() &#123;</span><br><span class="line">    //margin-left: 4rem;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.my-post-header</span>&#123;</span><br><span class="line">  <span class="attribute">position</span>: top;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: <span class="number">1rem</span>;</span><br><span class="line">  <span class="attribute">-webkit-transition</span>: all .<span class="number">2s</span> ease-in-out;</span><br><span class="line">  <span class="attribute">-moz-transition</span>: all .<span class="number">2s</span> ease-in-out;</span><br><span class="line">  <span class="attribute">-o-transition</span>: all .<span class="number">2s</span> ease-in-out;</span><br><span class="line">  <span class="attribute">-ms-transition</span>: all .<span class="number">2s</span> ease-in-out;</span><br><span class="line">  <span class="attribute">transition</span>: all .<span class="number">2s</span> ease-in-out;</span><br><span class="line">&#125;</span><br><span class="line">//.my-post-title-link&#123;</span><br><span class="line">//  font-size: 16px;</span><br><span class="line">//  font-weight: 500;</span><br><span class="line">//&#125;</span><br><span class="line"><span class="selector-class">.my-post-meta</span>&#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#99a9bf</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">80px</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#114142</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.post-block</span><span class="selector-class">.tag</span> <span class="selector-class">.collection-title</span> <span class="selector-tag">h2</span> &#123;</span><br><span class="line">  <span class="attribute">border-width</span>: <span class="number">1px</span>;</span><br><span class="line">  <span class="attribute">border-style</span>: solid;</span><br><span class="line">  <span class="attribute">border-color</span>: <span class="number">#3f3f3f</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">22px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#b4e8fa</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">2px</span> <span class="number">15px</span>;</span><br><span class="line">  <span class="attribute">letter-spacing</span>: <span class="number">1.5px</span>;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#3f3f3f</span>;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">10px</span> <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  +mobile()&#123;</span><br><span class="line">    <span class="selector-tag">font-size</span>: 18<span class="selector-tag">px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.category-list-link</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">1.1</span>);</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">10px</span> <span class="number">10px</span> <span class="number">15px</span> <span class="number">2px</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,.<span class="number">12</span>), <span class="number">0</span> <span class="number">0</span> <span class="number">6px</span> <span class="number">0</span> <span class="built_in">rgba</span>(<span class="number">104</span>, <span class="number">104</span>, <span class="number">105</span>, <span class="number">0.1</span>);</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">1px</span> <span class="number">1px</span>;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">  <span class="attribute">transition-duration</span>: <span class="number">0.15s</span>;</span><br><span class="line">  //display:flex;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 归档页样式 end */</span></span><br></pre></td></tr></table></figure>
+
+<p>​        可根据需求调整样式表。</p>
+<h5 id="4-3-文章首字下沉"><a href="#4-3-文章首字下沉" class="headerlink" title="4.3 文章首字下沉"></a>4.3 文章首字下沉</h5><p>​        在 <code>/themes/next/source/css/_custom/custom/styl</code> 中添加如下样式：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.post-body</span>&gt;<span class="selector-tag">p</span><span class="selector-pseudo">:first-child</span><span class="selector-pseudo">::first-letter</span>&#123;</span><br><span class="line">  <span class="attribute">float</span>: left;</span><br><span class="line"><span class="comment">/* height: 32px;*/</span></span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">14px</span>;</span><br><span class="line">  <span class="attribute">margin-right</span>: <span class="number">6px</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#555</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">42px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">28px</span>;</span><br><span class="line">  <span class="attribute">font-style</span>: normal;</span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">400</span>;</span><br><span class="line">  +mobile()&#123;</span><br><span class="line">    <span class="selector-tag">margin-top</span>: 10<span class="selector-tag">px</span>;</span><br><span class="line">    <span class="selector-tag">margin-right</span>: 4<span class="selector-tag">px</span>;</span><br><span class="line">    <span class="selector-tag">font-size</span>: 26<span class="selector-tag">px</span>;</span><br><span class="line">    <span class="selector-tag">line-height</span>: 20<span class="selector-tag">px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改 <code>div</code> 标签下第一个 <code>p</code> 标签的样式。</p>
+<h5 id="4-4-canvas粒子时钟"><a href="#4-4-canvas粒子时钟" class="headerlink" title="4.4 canvas粒子时钟"></a>4.4 canvas粒子时钟</h5><p>​        在 <code>/themes/next/layout/_custom/</code> 目录下，新建 <code>clock.swig</code> 文件。</p>
+<p>​        在 ``/themes/next/layout/_macro/sidebar.swig` 中引入：</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;section&gt;</span><br><span class="line">    &lt;div style="display:flex;margin-top:2px;margin-bottom:2px"&gt;</span><br><span class="line">    	&#123;% include '../_custom/clock.swig' %&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="4-5-网站运行时间"><a href="#4-5-网站运行时间" class="headerlink" title="4.5 网站运行时间"></a>4.5 网站运行时间</h5><p>​        在 <code>/themes/next/layout/_custom/</code> 目录下，新建 <code>runtime.swig</code> 文件，内容如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"days"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">language</span>=<span class="string">"javascript"</span>&gt;</span></span><br><span class="line"><span class="actionscript"><span class="function"><span class="keyword">function</span> <span class="title">show_date_time</span><span class="params">()</span></span>&#123;</span></span><br><span class="line"><span class="javascript"><span class="built_in">window</span>.setTimeout(<span class="string">"show_date_time()"</span>, <span class="number">1000</span>);</span></span><br><span class="line"><span class="javascript">BirthDay=<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"08/07/2019 20:00:00"</span>);</span></span><br><span class="line"><span class="javascript">today=<span class="keyword">new</span> <span class="built_in">Date</span>();</span></span><br><span class="line">timeold=(today.getTime()-BirthDay.getTime());</span><br><span class="line">sectimeold=timeold/1000</span><br><span class="line"><span class="javascript">secondsold=<span class="built_in">Math</span>.floor(sectimeold);</span></span><br><span class="line">msPerDay=24*60*60*1000</span><br><span class="line">e_daysold=timeold/msPerDay</span><br><span class="line"><span class="javascript">daysold=<span class="built_in">Math</span>.floor(e_daysold);</span></span><br><span class="line">e_hrsold=(e_daysold-daysold)*24;</span><br><span class="line"><span class="javascript">hrsold=setzero(<span class="built_in">Math</span>.floor(e_hrsold));</span></span><br><span class="line">e_minsold=(e_hrsold-hrsold)*60;</span><br><span class="line"><span class="javascript">minsold=setzero(<span class="built_in">Math</span>.floor((e_hrsold-hrsold)*<span class="number">60</span>));</span></span><br><span class="line"><span class="javascript">seconds=setzero(<span class="built_in">Math</span>.floor((e_minsold-minsold)*<span class="number">60</span>));</span></span><br><span class="line"><span class="javascript"><span class="built_in">document</span>.getElementById(<span class="string">'days'</span>).innerHTML=<span class="string">"已运行"</span>+daysold+<span class="string">"天"</span>+hrsold+<span class="string">"时"</span>+minsold+<span class="string">"分"</span>+seconds+<span class="string">"秒"</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="actionscript"><span class="function"><span class="keyword">function</span> <span class="title">setzero</span><span class="params">(i)</span></span>&#123;</span></span><br><span class="line">if (i&lt;10)</span><br><span class="line"><span class="actionscript">&#123;i=<span class="string">"0"</span> + i&#125;;</span></span><br><span class="line"><span class="actionscript"><span class="keyword">return</span> i;</span></span><br><span class="line">&#125;</span><br><span class="line">show_date_time();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>​        修改 BirthDay 为建站起始时间。</p>
+<p>​        在 ``/themes/next/layout/_macro/sidebar.swig` 中引入：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"display:flex;margin-top:2px;margin-bottom:2px"</span>&gt;</span></span><br><span class="line">        &#123;% include '../_custom/runtime.swig' %&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="4-6-网站动态背景图片"><a href="#4-6-网站动态背景图片" class="headerlink" title="4.6 网站动态背景图片"></a>4.6 网站动态背景图片</h5><p>​        在 <code>/themes/next/source/css/_custom/custom.styl</code> 中设置 <code>body</code> 属性：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>:<span class="built_in">url</span>(https://source.unsplash.com/random/<span class="number">1600</span>x900);</span><br><span class="line">  <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">  <span class="attribute">background-attachment</span>:fixed;</span><br><span class="line">  <span class="attribute">background-position</span>:<span class="number">50%</span> <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​        其中 url 可根据 <a href="https://unsplash.com/developers" target="_blank" rel="noopener">Unsplash Source</a>网站来生成。</p>
+<p>​        修改 <code>custom.styl</code> 背景透明度：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 设置页面透明度</span><br><span class="line"><span class="selector-class">.content-wrap</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.9</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.sidebar</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.9</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.header-inner</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.9</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.popup</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.9</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​        其它背景效果可在主题 <code>_config.yml</code> 中 <code>canvas</code> 系列进行设置。</p>
+<h5 id="4-7-主页轮播图"><a href="#4-7-主页轮播图" class="headerlink" title="4.7 主页轮播图"></a>4.7 主页轮播图</h5><p>在 <code>/themes/next/layout/_macro/</code> 目录下，新建 <code>carousel.swig</code> 文件：</p>
+<p>在 <code>/themes/next/layout/index.swig</code> 中，找到：</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block content %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在其下方引入新建的 <code>carousel.swig</code>  文件：</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 轮播图 --&gt;</span><br><span class="line">&#123;% include '_macro/carousel.swig' %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在主题配置文件某尾添加：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Home carousel map, from means link, img means picture</span></span><br><span class="line"><span class="attr">carousel:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">item:</span> <span class="string">[</span></span><br><span class="line">    <span class="string">&#123;</span></span><br><span class="line">      <span class="attr">'link':</span> <span class="string">'文章链接地址'</span><span class="string">,</span></span><br><span class="line">      <span class="attr">'img':</span> <span class="string">'图片链接地址'</span></span><br><span class="line">    <span class="string">&#125;,</span></span><br><span class="line">    <span class="string">&#123;</span></span><br><span class="line">      <span class="attr">'link':</span> <span class="string">'文章链接地址'</span><span class="string">,</span></span><br><span class="line">      <span class="attr">'img':</span> <span class="string">'图片链接地址'</span></span><br><span class="line">    <span class="string">&#125;</span></span><br><span class="line">  <span class="string">]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="4-8-调整页面宽度"><a href="#4-8-调整页面宽度" class="headerlink" title="4.8 调整页面宽度"></a>4.8 调整页面宽度</h5><p> 修改文件<code>source/css/_variables/Pisces.styl</code>，调整如下 ：</p>
 
       
     </div>
@@ -949,6 +1019,300 @@
         </div>
       </section>
 
+      <section>
+        <div style="display:flex;margin-top:2px;margin-bottom:2px">
+          <!-- canvas粒子时钟 https://www.cnblogs.com/xiaohuochai/p/6368039.html
+  https://www.html5tricks.com/html5-canvas-dance-time.html
+ -->
+<div id="">
+  <canvas id="canvas" style="width:60%;">
+</div>
+<script async>
+(function(){
+  var WINDOW_WIDTH = 820;
+  		var WINDOW_HEIGHT = 250;
+  		var RADIUS = 7; //球半径
+  		var NUMBER_GAP = 10; //数字之间的间隙
+  		var u=0.65; //碰撞能量损耗系数
+  		var context; //Canvas绘制上下文
+  		var balls = []; //存储彩色的小球
+  		const colors = ["#33B5E5","#0099CC","#AA66CC","#9933CC","#99CC00","#669900","#FFBB33","#FF8800","#FF4444","#CC0000"]; //彩色小球的颜色
+  		var currentNums = []; //屏幕显示的8个字符
+  		var digit =
+                  [
+                      [
+                          [0,0,1,1,1,0,0],
+                          [0,1,1,0,1,1,0],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,0,1,1,0],
+                          [0,0,1,1,1,0,0]
+                      ],//0
+                      [
+                          [0,0,0,1,1,0,0],
+                          [0,1,1,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [1,1,1,1,1,1,1]
+                      ],//1
+                      [
+                          [0,1,1,1,1,1,0],
+                          [1,1,0,0,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,1,1,0,0,0],
+                          [0,1,1,0,0,0,0],
+                          [1,1,0,0,0,0,0],
+                          [1,1,0,0,0,1,1],
+                          [1,1,1,1,1,1,1]
+                      ],//2
+                      [
+                          [1,1,1,1,1,1,1],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,1,1,1,0,0],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,1,1,1,0]
+                      ],//3
+                      [
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,1,1,1,0],
+                          [0,0,1,1,1,1,0],
+                          [0,1,1,0,1,1,0],
+                          [1,1,0,0,1,1,0],
+                          [1,1,1,1,1,1,1],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,1,1,1,1]
+                      ],//4
+                      [
+                          [1,1,1,1,1,1,1],
+                          [1,1,0,0,0,0,0],
+                          [1,1,0,0,0,0,0],
+                          [1,1,1,1,1,1,0],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,1,1,1,0]
+                      ],//5
+                      [
+                          [0,0,0,0,1,1,0],
+                          [0,0,1,1,0,0,0],
+                          [0,1,1,0,0,0,0],
+                          [1,1,0,0,0,0,0],
+                          [1,1,0,1,1,1,0],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,1,1,1,0]
+                      ],//6
+                      [
+                          [1,1,1,1,1,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,0,1,1,0,0],
+                          [0,0,1,1,0,0,0],
+                          [0,0,1,1,0,0,0],
+                          [0,0,1,1,0,0,0],
+                          [0,0,1,1,0,0,0]
+                      ],//7
+                      [
+                          [0,1,1,1,1,1,0],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,1,1,1,0],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,1,1,1,0]
+                      ],//8
+                      [
+                          [0,1,1,1,1,1,0],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [1,1,0,0,0,1,1],
+                          [0,1,1,1,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,0,1,1],
+                          [0,0,0,0,1,1,0],
+                          [0,0,0,1,1,0,0],
+                          [0,1,1,0,0,0,0]
+                      ],//9
+                      [
+                          [0,0,0,0],
+                          [0,0,0,0],
+                          [0,1,1,0],
+                          [0,1,1,0],
+                          [0,0,0,0],
+                          [0,0,0,0],
+                          [0,1,1,0],
+                          [0,1,1,0],
+                          [0,0,0,0],
+                          [0,0,0,0]
+                      ]//:
+                  ];
+
+  		function drawDatetime(cxt){
+  			var nums = [];
+
+  			context.fillStyle="#005eac"
+  			var date = new Date();
+  			var offsetX = 70, offsetY = 30;
+  			var hours = date.getHours();
+  			var num1 = Math.floor(hours/10);
+  			var num2 = hours%10;
+  			nums.push({num: num1});
+  			nums.push({num: num2});
+  			nums.push({num: 10}); //冒号
+  			var minutes = date.getMinutes();
+  			var num1 = Math.floor(minutes/10);
+  			var num2 = minutes%10;
+  			nums.push({num: num1});
+  			nums.push({num: num2});
+  			nums.push({num: 10}); //冒号
+  			var seconds = date.getSeconds();
+  			var num1 = Math.floor(seconds/10);
+  			var num2 = seconds%10;
+  			nums.push({num: num1});
+  			nums.push({num: num2});
+
+  			for(var x = 0;x<nums.length;x++){
+  				nums[x].offsetX = offsetX;
+  				offsetX = drawSingleNumber(offsetX,offsetY, nums[x].num,cxt);
+  				//两个数字连一块，应该间隔一些距离
+  				if(x<nums.length-1){
+  					if((nums[x].num!=10) &&(nums[x+1].num!=10)){
+  						offsetX+=NUMBER_GAP;
+  					}
+  				}
+  			}
+
+  			//说明这是初始化
+  			if(currentNums.length ==0){
+  				currentNums = nums;
+  			}else{
+  				//进行比较
+  				for(var index = 0;index<currentNums.length;index++){
+  					if(currentNums[index].num!=nums[index].num){
+  						//不一样时，添加彩色小球
+  						addBalls(nums[index]);
+  						currentNums[index].num=nums[index].num;
+  					}
+  				}
+  			}
+  			renderBalls(cxt);
+  			updateBalls();
+
+  			return date;
+  		}
+
+  		function addBalls (item) {
+  			var num = item.num;
+  			var numMatrix = digit[num];
+  			for(var y = 0;y<numMatrix.length;y++){
+  				for(var x = 0;x<numMatrix[y].length;x++){
+  					if(numMatrix[y][x]==1){
+  						var ball={
+  							offsetX:item.offsetX+RADIUS+RADIUS*2*x,
+  							offsetY:30+RADIUS+RADIUS*2*y,
+  							color:colors[Math.floor(Math.random()*colors.length)],
+  							g:1.5+Math.random(),
+  							vx:Math.pow(-1, Math.ceil(Math.random()*10))*4+Math.random(),
+  							vy:-5
+  						}
+  						balls.push(ball);
+  					}
+  				}
+  			}
+  		}
+
+  		function renderBalls(cxt){
+  			for(var index = 0;index<balls.length;index++){
+  				cxt.beginPath();
+  				cxt.fillStyle=balls[index].color;
+  				cxt.arc(balls[index].offsetX, balls[index].offsetY, RADIUS, 0, 2*Math.PI);
+  				cxt.fill();
+  			}
+  		}
+
+  		function updateBalls () {
+  			var i =0;
+  			for(var index = 0;index<balls.length;index++){
+  				var ball = balls[index];
+  				ball.offsetX += ball.vx;
+  				ball.offsetY += ball.vy;
+  				ball.vy+=ball.g;
+  				if(ball.offsetY > (WINDOW_HEIGHT-RADIUS)){
+  					ball.offsetY= WINDOW_HEIGHT-RADIUS;
+  					ball.vy=-ball.vy*u;
+  				}
+  				if(ball.offsetX>RADIUS&&ball.offsetX<(WINDOW_WIDTH-RADIUS)){
+
+  					balls[i]=balls[index];
+  					i++;
+  				}
+  			}
+  			//去除出边界的球
+  			for(;i<balls.length;i++){
+  				balls.pop();
+  			}
+  		}
+  		function drawSingleNumber(offsetX, offsetY, num, cxt){
+  			var numMatrix = digit[num];
+  			for(var y = 0;y<numMatrix.length;y++){
+  				for(var x = 0;x<numMatrix[y].length;x++){
+  					if(numMatrix[y][x]==1){
+  						cxt.beginPath();
+  						cxt.arc(offsetX+RADIUS+RADIUS*2*x,offsetY+RADIUS+RADIUS*2*y,RADIUS,0,2*Math.PI);
+  						cxt.fill();
+  					}
+  				}
+  			}
+  			cxt.beginPath();
+  			offsetX += numMatrix[0].length*RADIUS*2;
+  			return offsetX;
+  		}
+
+  		var canvas = document.getElementById("canvas");
+  		canvas.width=WINDOW_WIDTH;
+  		canvas.height=WINDOW_HEIGHT;
+  		context = canvas.getContext("2d");
+
+  		//记录当前绘制的时刻
+  		var currentDate = new Date();
+
+  		setInterval(function(){
+  			//清空整个Canvas，重新绘制内容
+  			context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+  			drawDatetime(context);
+  		}, 50)
+})();
+</script>
+        </div>
+      </section>
+
       
       <!--noindex-->
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
@@ -959,7 +1323,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-基础配置"><span class="nav-text">1.基础配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-Next主题的启用"><span class="nav-text">1.1 Next主题的启用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-更改语言为中文"><span class="nav-text">1.2 更改语言为中文</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-增加标签页和分类页"><span class="nav-text">1.3 增加标签页和分类页</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-4-增加about简介页"><span class="nav-text">1.4 增加about简介页</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-美化配置"><span class="nav-text">2.美化配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-主题样式更改"><span class="nav-text">2.1 主题样式更改</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-更改头像"><span class="nav-text">2.1 更改头像</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-更改标题、作者和链接"><span class="nav-text">2.2 更改标题、作者和链接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3-启用侧边栏社交链接"><span class="nav-text">2.3 启用侧边栏社交链接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-4-启用友情链接"><span class="nav-text">2.4 启用友情链接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-5-开启打赏功能"><span class="nav-text">2.5 开启打赏功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-6-开启订阅公众号"><span class="nav-text">2.6 开启订阅公众号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-7-首页显示阅读全文"><span class="nav-text">2.7 首页显示阅读全文</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-8-添加fork-Github"><span class="nav-text">2.8 添加fork Github</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-9-关闭Next目录的自动添加序号"><span class="nav-text">2.9 关闭Next目录的自动添加序号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-10-修改文章内链接样式"><span class="nav-text">2.10 修改文章内链接样式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-11-修改文章底部标签前图标样式"><span class="nav-text">2.11 修改文章底部标签前图标样式</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-进阶功能"><span class="nav-text">3.进阶功能</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1-增加Valine评论功能"><span class="nav-text">3.1 增加Valine评论功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-增加来必力评论"><span class="nav-text">3.2 增加来必力评论</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-3-增加Gitmen评论"><span class="nav-text">3.3 增加Gitmen评论</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-4-增加搜索功能"><span class="nav-text">3.4 增加搜索功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-增加不蒜子统计功能"><span class="nav-text">3.5 增加不蒜子统计功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-增加内容分享服务"><span class="nav-text">3.6 增加内容分享服务</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-7-增加加载效果"><span class="nav-text">3.7 增加加载效果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-增加点击爆炸效果"><span class="nav-text">3.8 增加点击爆炸效果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-9-隐藏网页底部强力驱动"><span class="nav-text">3.9 隐藏网页底部强力驱动</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-10-字数统计和阅读时长功能"><span class="nav-text">3.10 字数统计和阅读时长功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-11-博客添加显示图片"><span class="nav-text">3.11 博客添加显示图片</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-基础配置"><span class="nav-text">1.基础配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-Next主题的启用"><span class="nav-text">1.1 Next主题的启用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-更改语言为中文"><span class="nav-text">1.2 更改语言为中文</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-增加标签页和分类页"><span class="nav-text">1.3 增加标签页和分类页</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-4-增加about简介页"><span class="nav-text">1.4 增加about简介页</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-美化配置"><span class="nav-text">2.美化配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-主题样式更改"><span class="nav-text">2.1 主题样式更改</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-更改头像"><span class="nav-text">2.1 更改头像</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-更改标题、作者和链接"><span class="nav-text">2.2 更改标题、作者和链接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3-启用侧边栏社交链接"><span class="nav-text">2.3 启用侧边栏社交链接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-4-启用友情链接"><span class="nav-text">2.4 启用友情链接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-5-开启打赏功能"><span class="nav-text">2.5 开启打赏功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-6-开启订阅公众号"><span class="nav-text">2.6 开启订阅公众号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-7-首页显示阅读全文"><span class="nav-text">2.7 首页显示阅读全文</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-8-添加fork-Github"><span class="nav-text">2.8 添加fork Github</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-9-关闭Next目录的自动添加序号"><span class="nav-text">2.9 关闭Next目录的自动添加序号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-10-修改文章内链接样式"><span class="nav-text">2.10 修改文章内链接样式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-11-修改文章底部标签前图标样式"><span class="nav-text">2.11 修改文章底部标签前图标样式</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-进阶功能"><span class="nav-text">3.进阶功能</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1-增加Valine评论功能"><span class="nav-text">3.1 增加Valine评论功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-增加来必力评论"><span class="nav-text">3.2 增加来必力评论</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-3-增加Gitmen评论"><span class="nav-text">3.3 增加Gitmen评论</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-4-增加搜索功能"><span class="nav-text">3.4 增加搜索功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-增加不蒜子统计功能"><span class="nav-text">3.5 增加不蒜子统计功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-增加内容分享服务"><span class="nav-text">3.6 增加内容分享服务</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-7-增加加载效果"><span class="nav-text">3.7 增加加载效果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-8-增加点击爆炸效果"><span class="nav-text">3.8 增加点击爆炸效果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-9-隐藏网页底部强力驱动"><span class="nav-text">3.9 隐藏网页底部强力驱动</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-10-字数统计和阅读时长功能"><span class="nav-text">3.10 字数统计和阅读时长功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-11-博客添加显示图片"><span class="nav-text">3.11 博客添加显示图片</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-高级美化"><span class="nav-text">4.高级美化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#4-1-彩色标签页"><span class="nav-text">4.1 彩色标签页</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-2-归档页美化"><span class="nav-text">4.2 归档页美化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-3-文章首字下沉"><span class="nav-text">4.3 文章首字下沉</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-4-canvas粒子时钟"><span class="nav-text">4.4 canvas粒子时钟</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-5-网站运行时间"><span class="nav-text">4.5 网站运行时间</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-6-网站动态背景图片"><span class="nav-text">4.6 网站动态背景图片</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-7-主页轮播图"><span class="nav-text">4.7 主页轮播图</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-8-调整页面宽度"><span class="nav-text">4.8 调整页面宽度</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1058,6 +1422,8 @@
   
 
 
+  
+
 
 
 
@@ -1096,6 +1462,11 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
